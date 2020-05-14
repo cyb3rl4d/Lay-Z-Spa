@@ -143,11 +143,22 @@ I'll be working on a python script to automate some functions. Do let me know if
 
 As requested please find below information related to the local MQTT messages, note that intercepting local MQTT would be a bad idea and therefore any interaction should be via the API gateway. Although just in case we ever loose access to the App / head end this is what I have up to now. More needs to be done to analyse the boot process but at least this is a start.
 
-| Action        | Topic                             | Message                                                      |
-| ------------- |:-----------------------------------:| ------------------------------------------------------------:|
-| Swtich Off    | app2dev/**********************/0    | 00000003140000900**1000100**00000000000000000000000000       |
-| Switch On     | app2dev/**********************/0    | 00000003140000900**1000101**00000000000000000000000000       |
-|               |                                     |                                                              |
+Note I'm unsure if aQ2zORXv7N4qCkv2WKZVT is related to a unique identifier for my hot tub, therefore I've used this as an example. Therefore, please dont use the topic as outlined below but have a look at what MQTT messages you're seeing.
+
+
+| Action        | Topic                            | Message                                                |
+| ------------- |:--------------------------------:| ------------------------------------------------------:|
+| Swtich Off    | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000100**00000000000000000000000000 |
+| Switch On     | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000101**00000000000000000000000000 |
+| Filter Off    | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000400**00000000000000000000000000 |
+| Filter On     | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000404**00000000000000000000000000 |
+| Heat Off      | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000200**00000000000000000000000000 |
+| Heat On       | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000202**00000000000000000000000000 |
+| AirJet Off    | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000800**00000000000000000000000000 |
+| AirJet On     | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000808**00000000000000000000000000 |
+| Temp 20       | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**100800014**000000000000000000000000 |
+| Temp 30       | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | |
+| Temp 40       |||
 
 
 
