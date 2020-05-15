@@ -138,30 +138,25 @@ Finally sending a status request will bring back the following infomation:
 }
 ```
 
-I hope this helps someone, I've also captured the local end, Pump to head-end (this uses MQTT), I'll post this if required.
-I'll be working on a python script to automate some functions. Do let me know if you're interested or progressed with this.
+Please find below information related to the local MQTT messages, note that intercepting local MQTT would be a bad idea and therefore any interaction should be via the API gateway. Although, just in case we ever loose access to the App / head end this is what I have up to now. More needs to be done to analyse the boot process but at least this is a start.
 
-As requested please find below information related to the local MQTT messages, note that intercepting local MQTT would be a bad idea and therefore any interaction should be via the API gateway. Although just in case we ever loose access to the App / head end this is what I have up to now. More needs to be done to analyse the boot process but at least this is a start.
-
-Note I'm unsure if aQ2zORXv7N4qCkv2WKZVT is related to a unique identifier for my hot tub, therefore I've used this as an example. Therefore, please dont use the topic as outlined below but have a look at what MQTT messages you're seeing
-
-Temps are in Hex, so 20 = 14, 30 = 1e and 40 = 28
-
+Note that your Device ID is contained within your Topic, so for this example with the DID of qHTzHKGWH89Slsh57FYS then the topic will be as follows. Temps are in Hex, so 20 = 14, 30 = 1e and 40 = 28
 
 | Action        | Topic                            | Message                                                |
 | ------------- |:-------------------------------:| ------------------------------------------------------:|
-| Swtich Off    | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000100**00000000000000000000000000 |
-| Switch On     | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000101**00000000000000000000000000 |
-| Filter Off    | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000400**00000000000000000000000000 |
-| Filter On     | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000404**00000000000000000000000000 |
-| Heat Off      | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000200**00000000000000000000000000 |
-| Heat On       | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000202**00000000000000000000000000 |
-| AirJet Off    | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000800**00000000000000000000000000 |
-| AirJet On     | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**1000808**00000000000000000000000000 |
-| Temp 20       | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**100800014**000000000000000000000000 |
-| Temp 30       | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**10080001e**000000000000000000000000 |
-| Temp 40       | app2dev/aQ2zORXv7N4qCkv2WKZVT/0 | 00000003140000900**100800028**000000000000000000000000 |
+| Swtich Off    | app2dev/qHTzHKGWH89Slsh57FYS/0 | 00000003140000900**1000100**00000000000000000000000000 |
+| Switch On     | app2dev/qHTzHKGWH89Slsh57FYS/0 | 00000003140000900**1000101**00000000000000000000000000 |
+| Filter Off    | app2dev/qHTzHKGWH89Slsh57FYS/0 | 00000003140000900**1000400**00000000000000000000000000 |
+| Filter On     | app2dev/qHTzHKGWH89Slsh57FYS/0 | 00000003140000900**1000404**00000000000000000000000000 |
+| Heat Off      | app2dev/qHTzHKGWH89Slsh57FYS/0 | 00000003140000900**1000200**00000000000000000000000000 |
+| Heat On       | app2dev/qHTzHKGWH89Slsh57FYS/0 | 00000003140000900**1000202**00000000000000000000000000 |
+| AirJet Off    | app2dev/qHTzHKGWH89Slsh57FYS/0 | 00000003140000900**1000800**00000000000000000000000000 |
+| AirJet On     | app2dev/qHTzHKGWH89Slsh57FYS/0 | 00000003140000900**1000808**00000000000000000000000000 |
+| Temp 20       | app2dev/qHTzHKGWH89Slsh57FYS/0 | 00000003140000900**100800014**000000000000000000000000 |
+| Temp 30       | app2dev/qHTzHKGWH89Slsh57FYS/0 | 00000003140000900**10080001e**000000000000000000000000 |
+| Temp 40       | app2dev/qHTzHKGWH89Slsh57FYS/0 | 00000003140000900**100800028**000000000000000000000000 |
 
 
+I hope this helps someone, I've created a number of simple shell scripts to automate the operation of my hot tub, (switch on and off, get regular status updates, etc.) Do let me know if you're interested in a copy of these.
 
 
