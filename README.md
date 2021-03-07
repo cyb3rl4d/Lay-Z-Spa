@@ -26,6 +26,8 @@ You should then receive something like the following:
         "postcode": "",
         "optin": 0,
         "enabled": true,
+        "gizwits_email": "9qdfg45h64hrhdf36ghdfhe66trdrth6dhg@app.lay-z-spa.co.uk",
+        "gizwits_key": "dfg45egstge45sdfgfse45te5ye5j6e5xserge5",
         "gizwits_uid": "[UID-Here]"
         "gizwits_expires_at": "2020-03-01 05:10:01"
         "gizwits_token": "[Token-Here]"
@@ -40,16 +42,17 @@ You should then receive something like the following:
     },
     "devices": [
         {
-            "id": 888,
+            "id": 8888,
             "did": "[Device-ID-Here]",
             "mac": "[Pump-MAC-Add-Here]",
             "product_key": "[Product-Key-Here]",
             "uid": "[UID-Here]",
             "user_token": "[User-Token-Here]",
-            "app_uid": "8888",
+            "app_uid": "88888",
             "created_at": "2020-03-01 19:10:24",
             "updated_at": "2020-03-05 17:13:43",
             "device_name": "[Device-Name-Here]"
+            "pump_type": ""
         }
     ],
     "message": "Authorization Successful!"
